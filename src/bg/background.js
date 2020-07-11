@@ -20,7 +20,18 @@ chrome.webRequest.onBeforeRequest.addListener(
 			"*://*.doubleclick.net/*",
 			"*://*.googleadservices.com/*",
 			"*://*.googlesyndication.com/*",
-			"*://*.moat.com/*"
+			"*://*.moat.com/*",
+			"*://*.3lift.com/*",
+			"*://*.adnxs.com/*",
+			"*://*.adobedtm.com/*",
+			"*://*.advertising.com/*",
+			"*://*.amazon-adsystem.com/*",
+			"*://*.c.amazon-adsystem.com/*",
+			"*://*.casalemedia.com/*",
+			"*://*.clarium.global.ssl.fastly.net/*",
+			"*://*.demdex.net/*",
+			"*://*.imasdk.googleapis.com/*",
+			"*://*.newrelic.com/*"
 		]
 	},
 	["blocking"]
