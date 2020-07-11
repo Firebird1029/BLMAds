@@ -31,7 +31,11 @@ chrome.webRequest.onBeforeRequest.addListener(
 			"*://*.clarium.global.ssl.fastly.net/*",
 			"*://*.demdex.net/*",
 			"*://*.imasdk.googleapis.com/*",
-			"*://*.newrelic.com/*"
+			"*://*.newrelic.com/*",
+			"*://*.indexww.com/*",
+			"*://*.instana.io/*",
+			"*://*.permutive.com/*",
+			"*://*.adsafeprotected.com/*",
 		]
 	},
 	["blocking"]
