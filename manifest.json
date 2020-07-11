@@ -1,9 +1,9 @@
 {
-	"name": "CHANGE THIS : Extension boilerplate",
-	"version": "0.0.1",
+	"name": "BLMAds",
+	"version": "1.0.0",
 	"manifest_version": 2,
-	"description": "This extension was created with the awesome extensionizr.com",
-	"homepage_url": "http://extensionizr.com",
+	"description": "Donate money to the BLM movement by replacing existing ads on websites.",
+	"homepage_url": "http://blmads.com",
 	"icons": {
 		"16": "icons/icon16.png",
 		"48": "icons/icon48.png",
@@ -14,7 +14,6 @@
 		"scripts": ["src/bg/background.js"],
 		"persistent": true
 	},
-	"options_page": "src/options_custom/index.html",
 	"page_action": {
 		"default_icon": "icons/icon19.png",
 		"default_title": "page action demo",
@@ -23,7 +22,7 @@
 	"permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
 	"content_scripts": [
 		{
-			"matches": ["https://www.google.com/*"],
+			"matches": ["http://*/*", "https://*/*"],
 			"js": ["src/inject/inject.js"]
 		}
 	]
