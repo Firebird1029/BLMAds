@@ -1,0 +1,2 @@
+- https://medium.com/@KentGruber/build-your-own-ad-blocker-90230436e364
+- https://github.com/picatz/cube
