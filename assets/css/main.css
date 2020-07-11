@@ -3336,3 +3336,8 @@ input, select, textarea {
 p, a > h2 {
 	background-color: rgba(0, 0, 0, 0.75) !important;
 }
+
+#thingy {
+	background-color: black;
+	color: white;
+}
