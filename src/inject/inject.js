@@ -5,12 +5,9 @@ chrome.extension.sendMessage({}, function (response) {
 
 			// ----------------------------------------------------------
 			// This part of the script triggers when page is done loading
-			console.log("Hello. This message was sent from scripts/inject.js");
-			$(".adsbygoogle").each((i, el) => {
-				$(el).remove();
-			});
+			console.log("BLM Ad injection begin");
 
-			// --- START INJECT OUR ADSENSE
+			// --- Helper Function to load our Google Adsense
 			// this function will work cross-browser for loading scripts asynchronously
 			// https://stackoverflow.com/questions/7718935/load-scripts-asynchronously#7719185
 			function loadScript(src, callback) {
@@ -30,17 +27,17 @@ chrome.extension.sendMessage({}, function (response) {
 				t = document.getElementsByTagName("script")[0];
 				t.parentNode.insertBefore(s, t);
 			}
+
+			// Load our Google Adsense
 			loadScript("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", () => {
-				console.log("done");
 				$("#blm-ad-1").attr("data-ad-client", "ca-pub-8413947106743880");
+				console.log("BLM Ad injection complete");
+
+				// Replace existing ads
+				$(".adsbygoogle").each((i, el) => {
+					$(el).replaceWith(`<div>new ad here</div>`);
+				});
 			});
-
-			// --- END INJECT OUR ADSENSE
-
-			// $("body").append(
-			// 	`<script data-ad-client="ca-pub-8413947106743880" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>`
-			// );
-			// ----------------------------------------------------------
 		}
 	}, 10);
 });
