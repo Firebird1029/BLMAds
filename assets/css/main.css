@@ -3330,9 +3330,9 @@ input, select, textarea {
 
 
 .tiles article.style1 > .image:before {
-	background-color: rgba(0, 0, 0, 0.8) !important;
+	background-color: rgba(0, 0, 0, 0.75) !important;
 }
 
-p {
-	background-color: rgba(0, 0, 0, 0.8) !important;
+p, h2 {
+	background-color: rgba(0, 0, 0, 0.75) !important;
 }
