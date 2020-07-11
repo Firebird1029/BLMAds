@@ -13,13 +13,13 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
 chrome.webRequest.onBeforeRequest.addListener(
 	function (details) {
 		// console.log(details)
-		// return { cancel: true };
+		return { cancel: true };
 	},
 	{
 		urls: [
 			"*://*.doubleclick.net/*",
 			"*://*.googleadservices.com/*",
-			"*://*.googlesyndication.com/*",
+			// "*://*.googlesyndication.com/*",
 			"*://*.moat.com/*",
 			"*://*.3lift.com/*",
 			"*://*.adnxs.com/*",
