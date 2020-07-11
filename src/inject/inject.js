@@ -10,6 +10,8 @@ chrome.extension.sendMessage({}, function (response) {
 			$(".adsbygoogle").each((i, el) => {
 				$(el).remove();
 			});
+
+			// --- START INJECT OUR ADSENSE
 			// this function will work cross-browser for loading scripts asynchronously
 			// https://stackoverflow.com/questions/7718935/load-scripts-asynchronously#7719185
 			function loadScript(src, callback) {
@@ -33,6 +35,8 @@ chrome.extension.sendMessage({}, function (response) {
 				console.log("done");
 				$("#blm-ad-1").attr("data-ad-client", "ca-pub-8413947106743880");
 			});
+
+			// --- END INJECT OUR ADSENSE
 
 			// $("body").append(
 			// 	`<script data-ad-client="ca-pub-8413947106743880" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>`
